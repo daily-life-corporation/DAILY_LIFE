@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - DEILY LIFE CORPORATION</title>
 
+
     <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/simple-sidebar.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -31,17 +32,17 @@
             </div>
             <div class="col-10" align="right">
                 <div class="dropdown" style="cursor: pointer;">
-                    <img src="~/img/default.png" class="avatar"/>
+                    <img src="~/img/default.png" class="avatar" />
                     <button class="dropbtn">
-                        นายสมชาย ใจดี
+                        นายวรายุทธ เทกระโทก
                         <i class="fa fa-caret-down"></i>
                     </button>
 
                     <div class="dropdown-content">
-                        <a class="dropdown-item" href=""><i class="fa fa-user"></i>Profile</a>
-                        <a class="dropdown-item" href="" ><i class="fa fa-sign-out"></i>Log Out</a>
+                        <a class="dropdown-item" href="@Url.Action("Index", "Home")"><i class="fa fa-user"></i>Profile</a>
+                        <a class="dropdown-item" href="@Url.Action("Index", "Home")"><i class="fa fa-sign-out"></i>Log Out</a>
                     </div>
-                   
+
                 </div>
             </div>
         </div>
@@ -52,18 +53,22 @@
 
                 <li class="logo">
                     <div align="center">
-                        <img src="~/img/placeholder.jpg" class="img-responsive" style=" padding-top: 10%" width="170px">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img src="~/img/placeholder.jpg" class="img-responsive" style=" padding-top: 10%" width="170px">
+                        </a>
                     </div>
                 </li>
                 <li>
                     <div style="padding: 20px 0; text-indent: 0px;" align="center">
                         <span class="brand-line-one"></span><br>
-                        <span class="brand-line-second"> DAILY LIFE CORPORATION</span><br>
+                        <a href="@Url.Action("Index", "Home")">
+                            <span class="brand-line-second"> DAILY LIFE CORPORATION</span><br>
+                        </a>
                     </div>
                 </li>
 
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <a href="@Url.Action("Index", "Home")">
                         <div>
                             <i class="fa fa-home" style="font-size:24px"></i>
                             <span style="padding:5px; font-size:15px;">HOME</span>
@@ -72,28 +77,32 @@
                 </li>
 
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="ContactUs">
+                    <a href="@Url.Action("ContactUs", "Home")">
                         <div>
                             <i class="fa fa-comments" style="font-size:24px"></i>
                             <span style="padding:5px; font-size:15px; ">CONTACT US</span>
                         </div>
                     </a>
                 </li>
-                
+
             </ul>
         </div>
 
 
         <div id="page-content-wrapper">
-            @RenderBody();
+            @RenderBody()
         </div>
-    </div>
 
-    <script>
-        function menu_toggle() {
-            $("#wrapper").toggleClass("toggled");
-        }
-    </script>
+        <center>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - DEILY LIFE CORPORATION</p>
+            </footer>
+        </center>
+        <script>
+            function menu_toggle() {
+                $("#wrapper").toggleClass("toggled");
+            }
+        </script>
 
 
 </body>
