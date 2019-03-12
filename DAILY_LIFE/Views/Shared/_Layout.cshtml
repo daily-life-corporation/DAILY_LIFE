@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DEILY LIFE CORPORATION</title>
+
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/simple-sidebar.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+
+    <div id="wrapper" class="toggled">
+
+        <div class="row header">
+            <div class="col-2">
+                <a onclick="menu_toggle()" class="btn" style="cursor: pointer;">
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                </a>
+            </div>
+            <div class="col-10" align="right">
+                <div class="dropdown" style="cursor: pointer;">
+                    <button class="dropbtn">
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" >
+                            <i class="fa fa-user"></i> Profile
+                        </a>
+                        <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out"></i> Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+                <li>
+                    <div style="padding: 20px 0; text-indent: 0px;" align="center">
+                        <span class="brand-line-one"></span><br>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.php?content=home">
+                        <div>
+                            <i class="fa fa-home" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px;">HOME</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=book">
+                        <div>
+                            <i class="fa fa-book" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px;">BOOK</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?content=rooms">
+                        <div>
+                            <i class="fa fa-bed" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px;">ROOMS</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=facilities">
+                        <div>
+                            <i class="fa fa-bath" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px;">FACILITIES</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=gallery">
+                        <div>
+                            <i class="fa fa-picture-o" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px; ">GALLARY</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=about_us">
+                        <div>
+                            <i class="fa fa-info-circle" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px; ">ABOUT US</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=contact_us">
+                        <div>
+                            <i class="fa fa-comments" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px; ">CONTACT US</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.php?content=contact">
+                        <div>
+                            <i class="fa fa-commenting" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px; "> CONTACT </span>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+        <div id="page-content-wrapper">
+            @RenderBody();
+        </div>
+    </div>
+
+    <script>
+        function menu_toggle() {
+            $("#wrapper").toggleClass("toggled");
+        }
+    </script>
+
+
+</body>
+
+</html>
