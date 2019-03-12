@@ -13,5 +13,9 @@ namespace DAILY_LIFE.Controllers
         {
             return View();
         }
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
     }
 }
