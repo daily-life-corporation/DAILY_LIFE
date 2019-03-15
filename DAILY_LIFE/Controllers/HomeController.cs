@@ -17,5 +17,33 @@ namespace DAILY_LIFE.Controllers
         {
             return View();
         }
+        public ActionResult Profile()
+        {
+            return View();
+        }
+        public ActionResult Logout()
+        {
+            return View();
+        }
+        public ActionResult InsertUserProfile()
+        {
+            return View();
+        }
+        public ActionResult UpdateUserProfile()
+        {
+            return View();
+        }
+        public ActionResult DeleteUserProfile()
+        {
+            return View();
+        }
+        public ActionResult Insert()
+        {
+            return View();
+        }
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }
