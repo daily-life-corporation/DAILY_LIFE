@@ -1,0 +1,58 @@
+﻿@model DAILY_LIFE.Models.tbl_user
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_lastname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.user_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
