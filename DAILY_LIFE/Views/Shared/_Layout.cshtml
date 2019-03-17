@@ -41,8 +41,8 @@
                     </button>
 
                     <div class="dropdown-content">
-                        <a class="dropdown-item" href="@Url.Action("Profile", "Home")"><i class="fa fa-user"></i>Profile</a>
-                        <a class="dropdown-item" href="@Url.Action("Logout", "Home")"><i class="fa fa-sign-out"></i>Log Out</a>
+                        <a class="dropdown-item" href="@Url.Action("Index", "User")"><i class="fa fa-user"></i>Profile</a>
+                        <a class="dropdown-item" href="@Url.Action("Index", "UserType")"><i class="fa fa-sign-out"></i>Log Out</a>
                     </div>
 
                 </div>
@@ -55,7 +55,7 @@
 
                 <li class="logo">
                     <div align="center">
-                        <a href="@Url.Action("Index", "Home")">
+                        <a href="@Url.Action("Index", "User")">
                             <img src="~/img/placeholder.jpg" class="img-responsive" style=" padding-top: 10%" width="170px">
                         </a>
                     </div>
@@ -63,47 +63,30 @@
                 <li>
                     <div style="padding: 20px 0; text-indent: 0px;" align="center">
                         <span class="brand-line-one"></span><br>
-                        <a href="@Url.Action("Index", "Home")">
+                        <a href="@Url.Action("Index", "User")">
                             <span class="brand-line-second"> DAILY LIFE CORPORATION</span><br>
                         </a>
                     </div>
                 </li>
 
                 <li>
-                    <a href="@Url.Action("Index", "Home")">
+                    <a href="@Url.Action("Index", "UserType")">
                         <div>
-                            <i class="fas fa-home" style="font-size:24px"></i>
-                            <span style="padding:5px; font-size:15px;">HOME</span>
+                            <i class="fab fa-typo3" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px; "> ประเภทผู้ใช้งาน </span>
                         </div>
                     </a>
                 </li>
 
                 <li>
-                    <a href="@Url.Action("ContactUs", "Home")">
+                    <a href="@Url.Action("Index", "User")">
                         <div>
-                            <i class="fas fa-comments" style="font-size:24px"></i>
-                            <span style="padding:5px; font-size:15px; ">CONTACT US</span>
+                            <i class="fas fa-user" style="font-size:24px"></i>
+                            <span style="padding:5px; font-size:15px;"> ผู้ใช้งาน </span>
                         </div>
                     </a>
                 </li>
 
-                <li>
-                    <a href="@Url.Action("InsertUserProfile", "Home")">
-                        <div>
-                            <i class="fas fa-plus-square" style="font-size:24px"></i>
-                            <span style="padding:5px; font-size:15px; "> เพิ่มข้อมูลผู้ใช้งาน </span>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="@Url.Action("UpdateUserProfile", "Home")">
-                        <div>
-                            <i class="fas fa-pen-square" style="font-size:24px"></i>
-                            <span style="padding:5px; font-size:15px; "> แก้ไขข้อมูลผู้ใช้งาน </span>
-                        </div>
-                    </a>
-                </li>
 
             </ul>
         </div>
